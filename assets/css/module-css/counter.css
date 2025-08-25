@@ -1,0 +1,254 @@
+/*--------------------------------------------------------------
+# Counter One
+--------------------------------------------------------------*/
+.counter-one {
+    position: relative;
+    display: block;
+    margin-top: -150px;
+    z-index: 2;
+}
+
+.counter-one__inner {
+    position: relative;
+    display: block;
+    background-color: var(--erepair-black);
+    padding: 104px 0 84px;
+    border-radius: 20px;
+}
+
+.counter-one__single {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.counter-one__single::before {
+    content: "";
+    position: absolute;
+    bottom: -44px;
+    left: -9px;
+    top: -47px;
+    width: 1px;
+    background-color: rgba(var(--erepair-white-rgb), .30);
+}
+
+.counter-one__single-1::before {
+    display: none;
+}
+
+.counter-one__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.counter-one__icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 110px;
+    color: rgba(var(--erepair-white-rgb), .10);
+}
+
+.counter-one__count-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-one__count-box h3 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px !important;
+    font-family: var(--erepair-font-2) !important;
+    letter-spacing: -1.44px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.counter-one__single:hover .counter-one__count-box h3 {
+    color: var(--erepair-base);
+}
+
+.counter-one__count-box span {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px !important;
+    font-family: var(--erepair-font-2) !important;
+    color: var(--erepair-white);
+    letter-spacing: -1.44px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.counter-one__single:hover .counter-one__count-box span {
+    color: var(--erepair-base);
+}
+
+.counter-one__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family: var(--erepair-font-2);
+    color: var(--erepair-white);
+    margin-top: 11px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.counter-one__single:hover .counter-one__text {
+    color: var(--erepair-base);
+}
+
+/*--------------------------------------------------------------
+# Counter Two
+--------------------------------------------------------------*/
+.counter-two {
+    position: relative;
+    display: block;
+}
+
+.counter-two__inner {
+    position: relative;
+    display: block;
+    background-color: #232323;
+    border: 1px solid rgba(var(--erepair-white-rgb), .20);
+    border-radius: 20px;
+    padding: 59px 0 37px;
+}
+
+.counter-two__single {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.counter-two__single::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -9px;
+    top: 0px;
+    width: 1px;
+    background-color: #6E777D;
+}
+
+.counter-two__single-1::before {
+    display: none;
+}
+
+.counter-two__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    background-color: var(--erepair-primary);
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.counter-two__icon:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border-radius: 50%;
+    background-color: var(--erepair-white);
+    transform: scale(0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+    z-index: -1;
+}
+
+.counter-two__single:hover .counter-two__icon:before {
+    transform: scaleX(1);
+}
+
+.counter-two__single-2 .counter-two__icon {
+    background-color: var(--erepair-base);
+}
+
+.counter-two__single-4 .counter-two__icon {
+    background-color: var(--erepair-base);
+}
+
+.counter-two__icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 36px;
+    color: var(--erepair-base);
+    transition: all 500ms linear;
+    transition-delay: 0.1s;
+    transform: scale(1);
+}
+
+.counter-two__single:hover .counter-two__icon span {
+    transform: scale(0.9);
+    color: var(--erepair-black);
+}
+
+.counter-two__single-2 .counter-two__icon span {
+    color: var(--erepair-white);
+}
+
+.counter-two__single-4 .counter-two__icon span {
+    color: var(--erepair-white);
+}
+
+.counter-two__count-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    margin-bottom: 13px;
+}
+
+.counter-two__count-box h3 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px !important;
+    font-family: var(--erepair-font-2) !important;
+    letter-spacing: -1.44px;
+    top: 2px;
+}
+
+.counter-two__count-box span {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px !important;
+    font-family: var(--erepair-font-2) !important;
+    color: var(--erepair-white);
+    letter-spacing: -1.44px;
+}
+
+.counter-two__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family: var(--erepair-font-2);
+    color: rgba(var(--erepair-white-rgb), .80);
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

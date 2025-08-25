@@ -1,0 +1,138 @@
+/*--------------------------------------------------------------
+# CTA One
+--------------------------------------------------------------*/
+.cta-one {
+    position: relative;
+    display: block;
+    z-index: 2;
+}
+
+.cta-one .section-title__tagline {
+    color: var(--erepair-black);
+}
+
+.cta-one .section-title {
+    margin-bottom: 23px;
+}
+
+.cta-one__inner {
+    position: relative;
+    display: block;
+    background-color: var(--erepair-primary);
+    border-radius: 20px;
+    padding: 96px 90px 97px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-one__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.cta-one__img img {
+    width: auto;
+}
+
+.cta-one__text {
+    color: var(--erepair-black);
+}
+
+.cta-one__btn-and-call-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 44px;
+}
+
+.cta-one__btn-box {
+    position: relative;
+    display: block;
+}
+
+.cta-one__call-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cta-one__call-box .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(var(--erepair-white-rgb), .50);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.cta-one__call-box .icon:hover {
+    background-color: var(--erepair-base);
+}
+
+.cta-one__call-box .icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    color: var(--erepair-black);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.cta-one__call-box .icon:hover span {
+    color: var(--erepair-white);
+}
+
+.cta-one__call-box .content {
+    position: relative;
+    display: block;
+}
+
+.cta-one__call-box .content p {
+    color: var(--erepair-black);
+    font-family: var(--erepair-font-2);
+    text-transform: capitalize;
+}
+
+.cta-one__call-box .content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+}
+
+.cta-one__call-box .content h4 a {
+    color: var(--erepair-black);
+}
+
+.cta-one__call-box .content h4 a:hover {
+    color: var(--erepair-base);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

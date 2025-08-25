@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+# Process One
+--------------------------------------------------------------*/
+.process-one {
+    position: relative;
+    display: block;
+    counter-reset: count;
+    background-color: var(--erepair-black);
+    padding: 120px 0 90px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.process-one__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: luminosity;
+    opacity: .20;
+    z-index: -1;
+}
+
+.process-one .section-title-three__title {
+    color: var(--erepair-white);
+}
+
+.process-one__single {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.process-one__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--erepair-white);
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.process-one__single:hover .process-one__icon {
+    border: 2px solid var(--erepair-base);
+}
+
+.process-one__icon:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border-radius: 50%;
+    background-color: var(--erepair-base);
+    transform: scale(0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+    z-index: -1;
+}
+
+.process-one__single:hover .process-one__icon:before {
+    transform: scaleX(1);
+}
+
+.process-one__icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: var(--erepair-white);
+    transition: all 500ms linear;
+    transition-delay: 0.1s;
+    transform: scale(1);
+}
+
+.process-one__single:hover .process-one__icon span {
+    transform: scale(0.9);
+    color: var(--erepair-white);
+}
+
+.process-one__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 19px;
+    color: var(--erepair-white);
+}
+
+.process-one__count-box {
+    position: absolute;
+    left: -26px;
+    top: 50%;
+    bottom: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.process-one__count-box:before {
+    position: absolute;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    counter-increment: count;
+    content: ""counter(count);
+    color: var(--erepair-white);
+    background-color: var(--erepair-base);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: -1;
+}
+
+.process-one__single:hover .process-one__count-box:before {
+    color: var(--erepair-base);
+    background-color: var(--erepair-white);
+}

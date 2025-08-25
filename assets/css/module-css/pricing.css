@@ -1,0 +1,338 @@
+/*--------------------------------------------------------------
+# Pricing One
+--------------------------------------------------------------*/
+.pricing-one {
+    position: relative;
+    display: block;
+    padding: 0 0 90px;
+    z-index: 1;
+}
+
+.pricing-one__shape-1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: topBottom 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+.pricing-one__shape-1 img {
+    width: auto;
+    filter: invert(1);
+    opacity: 0.05;
+}
+
+.pricing-one__single {
+    position: relative;
+    display: block;
+    background-color: var(--erepair-extra);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.pricing-one__single::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: var(--erepair-black);
+    transform: scaleX(0.7) rotateX(20deg);
+    opacity: 0;
+    transition: all 0.4s linear;
+    z-index: -1;
+}
+
+.pricing-one__single:hover::before {
+    transform: scaleX(1.0) rotateX(0deg);
+    transition: all 0.4s linear;
+    opacity: 1;
+}
+
+.pricing-one__price-pack {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(var(--erepair-base-rgb), .20);
+    padding: 43px 40px 24px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-one__single:hover .pricing-one__price-pack {
+    border-bottom: 1px solid rgba(var(--erepair-white-rgb), .20);
+}
+
+.pricing-one__price-month {
+    position: relative;
+    display: block;
+}
+
+.pricing-one__price-month h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.72px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-one__single:hover .pricing-one__price-month h3 {
+    color: var(--erepair-white);
+}
+
+.pricing-one__price-month p {
+    font-family: var(--erepair-font-2);
+    color: var(--erepair-black);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-one__single:hover .pricing-one__price-month p {
+    color: #DDDDDD;
+}
+
+.pricing-one__price-pack h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-one__single:hover .pricing-one__price-pack>h2 {
+    color: var(--erepair-white);
+}
+
+.pricing-one__points-and-btn {
+    position: relative;
+    display: block;
+    padding: 30px 40px 40px;
+}
+
+.pricing-one__price-points {
+    position: relative;
+    display: block;
+}
+
+.pricing-one__price-points li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-one__price-points li+li {
+    margin-top: 17px;
+}
+
+.pricing-one__price-points li .icon {
+    position: relative;
+    display: inline-block;
+}
+
+.pricing-one__price-points li .icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: var(--erepair-base);
+}
+
+.pricing-one__price-points li p {
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-one__single:hover .pricing-one__price-points li p {
+    color: #DDDDDD;
+}
+
+.pricing-one__btn-box {
+    position: relative;
+    display: block;
+    margin-top: 40px;
+}
+
+.pricing-one__single:hover .pricing-one__btn {
+    color: var(--erepair-white);
+    background-color: var(--erepair-base);
+}
+
+/*--------------------------------------------------------------
+# Pricing Two
+--------------------------------------------------------------*/
+.pricing-two {
+    position: relative;
+    display: block;
+    padding: 120px 0 90px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pricing-two__shape-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.pricing-two__single {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.pricing-two__title-box {
+    position: relative;
+    display: block;
+    background-color: var(--erepair-extra);
+    text-align: center;
+    padding: 43px 0 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 1;
+}
+
+.pricing-two__title-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--erepair-black);
+    transform: scaleX(0.7) rotateX(20deg);
+    opacity: 0;
+    transition: all 0.4s linear;
+    z-index: -1;
+}
+
+.pricing-two__single:hover .pricing-two__title-box::before {
+    transform: scaleX(1.0) rotateX(0deg);
+    transition: all 0.4s linear;
+    opacity: 1;
+}
+
+.pricing-two__title-box h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.72px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-two__single:hover .pricing-two__title-box h3 {
+    color: var(--erepair-white);
+}
+
+.pricing-two__title-box p {
+    font-family: var(--erepair-font-2);
+    color: var(--erepair-black);
+    margin-top: 4px;
+    margin-bottom: 9px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-two__single:hover .pricing-two__title-box p {
+    color: var(--erepair-white);
+}
+
+.pricing-two__title-box h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-two__single:hover .pricing-two__title-box h2 {
+    color: var(--erepair-white);
+}
+
+.pricing-two__content {
+    position: relative;
+    display: block;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
+    padding: 35px 30px 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+}
+
+.pricing-two__price-points {
+    position: relative;
+    display: block;
+}
+
+.pricing-two__price-points li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-two__price-points li+li {
+    margin-top: 17px;
+}
+
+.pricing-two__price-points li .icon {
+    position: relative;
+    display: inline-block;
+}
+
+.pricing-two__price-points li .icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: var(--erepair-base);
+}
+
+.pricing-two__price-points li p {
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.pricing-two__btn-box {
+    position: relative;
+    display: block;
+    margin-top: 32px;
+}
+
+/*--------------------------------------------------------------
+# Pricing Three
+--------------------------------------------------------------*/
+.pricing-three {
+    padding: 120px 0 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/
