@@ -872,7 +872,7 @@
 
     .video-one__btn-box {
         gap: 20px;
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: baseline;
     }
 

@@ -148,6 +148,10 @@
     z-index: 1;
 }
 
+.contact-two .col-lg-4 {
+    margin-bottom: 10px;
+}
+
 .contact-two__single {
     position: relative;
     display: block;
@@ -155,7 +159,8 @@
     background-color: var(--erepair-extra);
     text-align: center;
     padding: 40px 40px 41px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    height: 100%;
 }
 
 .contact-two__icon {
@@ -214,7 +219,7 @@
 }
 
 .contact-two__single h3 {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 34px;
     letter-spacing: -0.72px;
@@ -302,7 +307,7 @@
     outline: none;
     font-size: 16px;
     font-weight: 400;
-    color: var(--erepair-gray);
+    color: #fff;
     display: block;
     border-radius: 20px;
 }
@@ -356,7 +361,7 @@
 
 .contact-three__input-box textarea {
     font-size: 16px;
-    color: var(--erepair-gray);
+    color: #fff;
     height: 175px;
     width: 100%;
     background-color: #232323;
@@ -384,6 +389,95 @@
 
 
 
+
+
+.contact_location_switcher {
+    width: 100%;
+    padding: 0px 10% 60px 10%;
+}
+
+.contact_location_switcher_tab {
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    /* border-radius: 20px; */
+    border-bottom: 1px solid #00000028;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #adadad00;
+    position: relative;
+}
+
+.contact_location_switcher_tab button {
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #004f99;
+    font-weight: 600;
+}
+
+.contact_location_tab_indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100%/4);
+    height: 2px;
+    background-color: #004f99;
+    z-index: 1;
+    transition: transform 0.8s ease;
+    transform: translateX(0%);
+}
+
+
+
+.contact_details_tab {
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    display: none;
+}
+
+.contact_details_tab_cont_container {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.contact_details_tab_cont_container img {
+    padding-right: 15px;
+}
+
+.contact_details_tab_cont_container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contact_details_tab h4 {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.contact_details_tab h6 {
+    font-weight: bold;
+    font-size: 150%;
+    padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .contact_sec {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .message_card {
+        padding: 15px;
+    }
+
+    .contact_location_switcher {
+        padding: 40px 2%;
+    }
+}
 
 
 

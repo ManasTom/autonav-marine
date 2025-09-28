@@ -9,6 +9,17 @@
     z-index: 1;
 }
 
+/* Background Video Styling */
+.page-header__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* ensures video covers entire area */
+    z-index: -2;         /* stays behind text */
+}
+
 .page-header__shape-1 {
     position: absolute;
     bottom: 0;
@@ -42,7 +53,7 @@
 
 .page-header__inner h3 {
     font-size: 60px;
-    color: var(--erepair-black);
+    color: #fff;
     line-height: 70px;
     font-weight: 600;
     letter-spacing: -1.8px;
@@ -52,6 +63,7 @@
 .thm-breadcrumb__inner {
     position: relative;
     display: block;
+    color: #fff;
 }
 
 .thm-breadcrumb {
@@ -65,7 +77,7 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 18px;
-    color: var(--erepair-black);
+    /* color: var(--erepair-black); */
     font-family: var(--erepair-font-2);
     text-transform: uppercase;
     -webkit-transition: all 500ms ease;
@@ -82,7 +94,7 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 18px;
-    color: var(--erepair-black);
+    color: #fff;
     font-family: var(--erepair-font-2);
     text-transform: uppercase;
     -webkit-transition: all 500ms ease;
@@ -90,13 +102,13 @@
 }
 
 .thm-breadcrumb li:hover a {
-    color: var(--erepair-base);
+    /* color: var(--erepair-base); */
     opacity: 1;
 }
 
 .thm-breadcrumb li span {
     font-size: 12px;
-    color: var(--erepair-base);
+    color: #fff;
 }
 
 

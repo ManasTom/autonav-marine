@@ -6,6 +6,7 @@
     display: block;
     padding: 120px 0 270px;
     z-index: 1;
+    background-color: var(--erepair-extra);
 }
 
 .video-one__sahpe-1 {

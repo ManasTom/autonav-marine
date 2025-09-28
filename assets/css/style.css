@@ -2180,7 +2180,7 @@ ul {
   padding: 10px 0;
 }
 
-.main-menu-three__logo img{
+.main-menu-three__logo img {
   max-width: 150px;
 }
 
@@ -2533,6 +2533,36 @@ ul {
   border: 1px solid rgba(var(--erepair-base-rgb), 1);
 }
 
+
+
+
+.explore-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-button {
+  background-color: #ffffff00;
+  color: #004f99;
+  border: 1px solid #004f99;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: max-content;
+  transition: 0.5s ease;
+}
+
+.explore-button:hover {
+  background-color: #004f99;
+  color: #fff;
+}
+
+.cntry-btn{
+  border: 2px solid #004f99 !important;
+  margin-bottom: 15px !important;
+  cursor: default;
+}
 
 
 
