@@ -8,7 +8,7 @@
 }
 
 .cta-one .section-title__tagline {
-    color: var(--erepair-black);
+    color: #fff;
 }
 
 .cta-one .section-title {
@@ -18,7 +18,7 @@
 .cta-one__inner {
     position: relative;
     display: block;
-    background-color: var(--erepair-primary);
+    background-color: #004F99;
     border-radius: 20px;
     padding: 96px 90px 97px;
     overflow: hidden;
@@ -37,7 +37,14 @@
 }
 
 .cta-one__text {
-    color: var(--erepair-black);
+    color: #fff;
+}
+
+@media only screen and (min-width: 1200px) {
+    .cta-one__text {
+        color: #fff;
+        width: 50%;
+    }
 }
 
 .cta-one__btn-and-call-box {
@@ -96,7 +103,7 @@
 }
 
 .cta-one__call-box .content p {
-    color: var(--erepair-black);
+    color: #fff;
     font-family: var(--erepair-font-2);
     text-transform: capitalize;
 }
@@ -108,11 +115,11 @@
 }
 
 .cta-one__call-box .content h4 a {
-    color: var(--erepair-black);
+    color: #fff;
 }
 
 .cta-one__call-box .content h4 a:hover {
-    color: var(--erepair-base);
+    color: #fff;
 }
 
 

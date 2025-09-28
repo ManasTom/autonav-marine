@@ -96,7 +96,7 @@
     position: relative;
     display: block;
     border-radius: 7px;
-    background-color: var(--erepair-base);
+    /* background-color: var(--erepair-base); */
 }
 
 .skill-one__right-img img {

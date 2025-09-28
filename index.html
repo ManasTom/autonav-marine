@@ -59,6 +59,10 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6c53136549.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -123,8 +127,8 @@
                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                 <ul class="main-menu__list">
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about.html">Products</a></li>
-                                    <li><a href="about.html">Services</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="services.html">Services</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -132,7 +136,7 @@
                         <div class="main-menu-three__right">
                             <div class="main-menu-three__cart-btn-and-login-box">
                                 <div class="main-menu-three__btn-box">
-                                    <a href="contact.html" class="main-menu-three__btn thm-btn">Get a Quote</a>
+                                    <a href="contact.html" class="main-menu-three__btn thm-btn">Connect With Us</a>
                                 </div>
                             </div>
                         </div>
@@ -283,14 +287,14 @@
                                     <img src="assets/images/man-examining-equipment.jpg" alt="">
                                 </div>
                                 <div class="about-three__img-two">
-                                    <img src="assets/images/resources/about-3-2.jpg" alt="">
+                                    <img src="assets/images/about-image-2.png" alt="">
                                     <div class="about-three__video-link">
-                                        <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                                        <!-- <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
                                             <div class="about-three__video-icon">
                                                 <span class="fa fa-play"></span>
                                                 <i class="ripple"></i>
                                             </div>
-                                        </a>
+                                        </a> -->
                                     </div>
                                 </div>
                             </div>
@@ -437,27 +441,27 @@
         <!--Process One Start-->
         <section class="process-one">
             <div class="process-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url(assets/images/backgrounds/process-one-bg.jpg);">
+                style="background-image: url(assets/images/why-choose-us-background-ship.jpg);">
             </div>
             <div class="container">
                 <div class="section-title-three text-center sec-title-animation animation-style1">
                     <div class="section-title-three__tagline-box justify-content-center">
                         <div class="section-title-three__tagline-shape"></div>
-                        <span class="section-title-three__tagline">Working Process</span>
+                        <span style="color: #fff;" class="section-title-three__tagline">Why Choose Us</span>
                         <div class="section-title-three__tagline-shape"></div>
                     </div>
-                    <h2 class="section-title-three__title title-animation">See our 4 easy steps how
-                        we works</h2>
+                    <h2 class="section-title-three__title title-animation">Trusted By the Marine Industry Since 2001</h2>
                 </div>
                 <div class="row">
                     <!--Process One Single Start-->
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="process-one__single">
                             <div class="process-one__icon">
-                                <span class="icon-ac1"></span>
+                                <span><i class="fa-solid fa-medal"></i></span>
                                 <div class="process-one__count-box"></div>
                             </div>
-                            <h3 class="process-one__title">Damage Device</h3>
+                            <h3 class="process-one__title">Two Decades of Expertise</h3>
+                            <p style="color: #fff;">Proven track record in marine navigation & communication</p>
                         </div>
                     </div>
                     <!--Process One Single End-->
@@ -465,10 +469,11 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="process-one__single">
                             <div class="process-one__icon">
-                                <span class="icon-send"></span>
+                                <span><i class="fa-solid fa-screwdriver-wrench"></i></span>
                                 <div class="process-one__count-box"></div>
                             </div>
-                            <h3 class="process-one__title">Send it to Us</h3>
+                            <h3 class="process-one__title">Comprehensive Solutions</h3>
+                            <p style="color: #fff;">From supply to repairs under one roof</p>
                         </div>
                     </div>
                     <!--Process One Single End-->
@@ -476,10 +481,11 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="process-one__single">
                             <div class="process-one__icon">
-                                <span class="icon-setting"></span>
+                                <span><i class="fa-solid fa-microchip"></i></span>
                                 <div class="process-one__count-box"></div>
                             </div>
-                            <h3 class="process-one__title">Repair Device</h3>
+                            <h3 class="process-one__title">Cutting-edge Technology</h3>
+                            <p style="color: #fff;">Latest navigation & safety equipment</p>
                         </div>
                     </div>
                     <!--Process One Single End-->
@@ -490,7 +496,8 @@
                                 <span class="icon-services"></span>
                                 <div class="process-one__count-box"></div>
                             </div>
-                            <h3 class="process-one__title">Quick Return</h3>
+                            <h3 class="process-one__title">Client-first Approach</h3>
+                            <p style="color: #fff;">Customized services for every vessel</p>
                         </div>
                     </div>
                     <!--Process One Single End-->
@@ -501,6 +508,9 @@
 
         <!--Skill One Start-->
         <section class="skill-one">
+            <div class="blog-three-shape-1 float-bob-y"
+                style="background-image: url(assets/images/shapes/blog-three-shape-1.png);">
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
@@ -510,17 +520,12 @@
                                     <div class="section-title-three__tagline-shape"></div>
                                     <span class="section-title-three__tagline">Our Skills & Expertise</span>
                                 </div>
-                                <h2 class="section-title-three__title title-animation">We Specialize In Quick &
-                                    <br> Professional Repairs
+                                <h2 class="section-title-three__title title-animation">Specialized in Marine Navigation & Communication Solutions
                                 </h2>
                             </div>
-                            <p class="skill-one__text">There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suffered alteration in some words which don't look even slightly
-                                believable. There are many variations of passages of Lorem Ipsum available</p>
-                            <p class="skill-one__text-2">There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suffered alteration in some words which don't look even slightly
-                                believable. There are many variations of passages of Lorem Ipsum available</p>
-                            <div class="skill-one__progress">
+                            <p class="skill-one__text">With more than two decades of experience, AUTONAV MARINE FZE has built a strong reputation for delivering precise, reliable, and professional services across the maritime industry. Our certified engineers and technicians ensure vessels are equipped with the latest navigation, communication, and safety technologies, keeping operations smooth and compliant with international standards.</p>
+                            <p class="skill-one__text-2">We combine diagnostic expertise, advanced repair capabilities, and seamless replacements to provide complete end-to-end support for our clients worldwide.</p>
+                            <!-- <div class="skill-one__progress">
                                 <div class="skill-one__progress-single">
                                     <div class="bar">
                                         <div class="bar-inner count-bar" data-percent="84%">
@@ -545,7 +550,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">
@@ -553,18 +558,18 @@
                             <div class="skill-one__right-img-box wow slideInRight" data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
                                 <div class="skill-one__right-img">
-                                    <img src="assets/images/resources/skill-1-1.jpg" alt="">
-                                    <div class="skill-one__video-link">
+                                    <img src="assets/images/expert-diagonosing.jpg" alt="">
+                                    <!-- <div class="skill-one__video-link">
                                         <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
                                             <div class="skill-one__video-icon">
                                                 <span class="fa fa-play"></span>
                                                 <i class="ripple"></i>
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="skill-one__video-content">
-                                    <p>Improve gadget smartphone laptop repair services</p>
+                                    <p>High End Technology With Expert Technicians</p>
                                 </div>
                             </div>
                         </div>
@@ -574,256 +579,47 @@
         </section>
         <!--Skill One End-->
 
-        <!--Pricing Two Start-->
-        <section class="pricing-two">
-            <div class="pricing-two__shape-1 float-bob-y"
-                style="background-image: url(assets/images/shapes/pricing-two-shape-1.jpg);"></div>
+        
+
+
+        <!--CTA One Start-->
+        <section class="cta-one">
             <div class="container">
-                <div class="section-title-three text-center sec-title-animation animation-style1">
-                    <div class="section-title-three__tagline-box justify-content-center">
-                        <div class="section-title-three__tagline-shape"></div>
-                        <span class="section-title-three__tagline">Our Pricing</span>
-                        <div class="section-title-three__tagline-shape"></div>
+                <div class="cta-one__inner">
+                    <div class="cta-one__img">
+                        <img src="assets/images/footer-īmage.png" alt="">
                     </div>
-                    <h2 class="section-title-three__title title-animation">Lighting the Way to <br>Quality Repairs</h2>
-                </div>
-                <div class="row">
-                    <!--Pricing Two Single Start-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="pricing-two__single">
-                            <div class="pricing-two__title-box">
-                                <h3>Basic Plan</h3>
-                                <p>Per Month</p>
-                                <h2>$49</h2>
+                    <div class="section-title text-left">
+                        <div class="section-title__tagline-box">
+                            <span class="section-title__tagline">Connect With Us</span>
+                        </div>
+                        <div class="section-title__title-box sec-title-animation animation-style2">
+                            <h2 class="section-title__title title-animation">Trusted Marine Solutions <br> With Value You Can Count On
+                            </h2>
+                        </div>
+                    </div>
+                    <p class="cta-one__text">At AUTONAV MARINE FZE, we go beyond supplying marine equipment. We deliver cost-effective, reliable, and innovative solutions that enhance vessel performance, safety, and communication.</p>
+                    <div class="cta-one__btn-and-call-box">
+                        <div class="cta-one__btn-box">
+                            <a href="contact.html" class="cta-one__btn thm-btn">Connect Now</a>
+                        </div>
+                        <div class="cta-one__call-box">
+                            <div class="icon">
+                                <span class="icon-call"></span>
                             </div>
-                            <div class="pricing-two__content">
-                                <ul class="pricing-two__price-points list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Mistakes To Avoid</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Your Startup</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Knew About Fonts</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Winning Metric for Your Startup</p>
-                                    </li>
-                                </ul>
-                                <div class="pricing-two__btn-box">
-                                    <a href="pricing.html" class="pricing-two__btn thm-btn">Choose Plan</a>
-                                </div>
+                            <div class="content">
+                                <p>Make a call</p>
+                                <h4><a href="tel:+97145727617">+971 4 572 7617</a></h4>
                             </div>
                         </div>
                     </div>
-                    <!--Pricing Two Single End-->
-                    <!--Pricing Two Single Start-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="pricing-two__single">
-                            <div class="pricing-two__title-box">
-                                <h3>Regular Plan</h3>
-                                <p>6 Month</p>
-                                <h2>$69</h2>
-                            </div>
-                            <div class="pricing-two__content">
-                                <ul class="pricing-two__price-points list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Mistakes To Avoid</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Your Startup</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Knew About Fonts</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Winning Metric for Your Startup</p>
-                                    </li>
-                                </ul>
-                                <div class="pricing-two__btn-box">
-                                    <a href="pricing.html" class="pricing-two__btn thm-btn">Choose Plan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Pricing Two Single End-->
-                    <!--Pricing Two Single Start-->
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="pricing-two__single">
-                            <div class="pricing-two__title-box">
-                                <h3>Premium Plan</h3>
-                                <p>Annual</p>
-                                <h2>$99</h2>
-                            </div>
-                            <div class="pricing-two__content">
-                                <ul class="pricing-two__price-points list-unstyled">
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Mistakes To Avoid</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Your Startup</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Knew About Fonts</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="icon-check"></span>
-                                        </div>
-                                        <p>Winning Metric for Your Startup</p>
-                                    </li>
-                                </ul>
-                                <div class="pricing-two__btn-box">
-                                    <a href="pricing.html" class="pricing-two__btn thm-btn">Choose Plan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Pricing Two Single End-->
                 </div>
             </div>
         </section>
-        <!--Pricing Two End-->
+        <!--CTA One End-->
 
-        <!--Blog Three Start-->
-        <div class="blog-three">
-            <div class="blog-three-shape-1 float-bob-y"
-                style="background-image: url(assets/images/shapes/blog-three-shape-1.png);">
-            </div>
-            <div class="container">
-                <div class="section-title-three text-center sec-title-animation animation-style1">
-                    <div class="section-title-three__tagline-box justify-content-center">
-                        <div class="section-title-three__tagline-shape"></div>
-                        <span class="section-title-three__tagline">From Our Blog</span>
-                        <div class="section-title-three__tagline-shape"></div>
-                    </div>
-                    <h2 class="section-title-three__title title-animation">News And Articles</h2>
-                </div>
-                <div class="row">
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="blog-three__single">
-                            <div class="blog-three__img">
-                                <img src="assets/images/blog/blog-3-1.jpg" alt="">
-                                <div class="blog-three__plus">
-                                    <a href="blog-details.html"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-three__content">
-                                <ul class="blog-three__meta list-unstyled">
-                                    <li>
-                                        <a href="blog-details.html"><i class="fa fa-calendar-alt"></i>5 Jan 2024</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-details.html"><i class="far fa-comments"></i>02 COMMENTS</a>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-three__title"><a href="blog-details.html">How To Fix Broken Back Glass
-                                        On
-                                        Your Phone</a></h3>
-                                <div class="blog-three__btn-box">
-                                    <a href="blog-details.html" class="thm-btn blog-three__btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="blog-three__single">
-                            <div class="blog-three__img">
-                                <img src="assets/images/blog/blog-3-2.jpg" alt="">
-                                <div class="blog-three__plus">
-                                    <a href="blog-details.html"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-three__content">
-                                <ul class="blog-three__meta list-unstyled">
-                                    <li>
-                                        <a href="blog-details.html"><i class="fa fa-calendar-alt"></i>5 Feb 2024</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-details.html"><i class="far fa-comments"></i>02 COMMENTS</a>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-three__title"><a href="blog-details.html">How To Fix Broken Screen On
-                                        Your
-                                        Laptop</a></h3>
-                                <div class="blog-three__btn-box">
-                                    <a href="blog-details.html" class="thm-btn blog-three__btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                    <!--Blog One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="blog-three__single">
-                            <div class="blog-three__img">
-                                <img src="assets/images/blog/blog-3-3.jpg" alt="">
-                                <div class="blog-three__plus">
-                                    <a href="blog-details.html"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-three__content">
-                                <ul class="blog-three__meta list-unstyled">
-                                    <li>
-                                        <a href="blog-details.html"><i class="fa fa-calendar-alt"></i>5 Mar 2022</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-details.html"><i class="far fa-comments"></i>02 COMMENTS</a>
-                                    </li>
-                                </ul>
-                                <h3 class="blog-three__title"><a href="blog-details.html">What Is The Best Affordable
-                                        Android Phone In 2022?</a></h3>
-                                <div class="blog-three__btn-box">
-                                    <a href="blog-details.html" class="thm-btn blog-three__btn">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Blog One Single End-->
-                </div>
-            </div>
-        </div>
-        <!--Blog Three End-->
-
-        <!--Site Footer Two Start-->
-        <footer class="site-footer-three">
+        <!--Site Footer Start-->
+        <footer class="site-footer">
             <div class="site-footer-three__shape-1 float-bob-x">
                 <img src="assets/images/shapes/site-footer-three-shape-1.png" alt="">
             </div>
@@ -831,29 +627,16 @@
                 <img src="assets/images/shapes/site-footer-three-shape-2.png" alt="">
             </div>
             <div class="container">
-                <div class="site-footer-three__top">
+                <div class="site-footer__top">
                     <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                            <div class="footer-widget-two__column footer-widget-three__about">
-                                <div class="footer-widget-three__title-box">
-                                    <h3 class="footer-widget-three__title">Open Hours</h3>
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="footer-widget__column footer-widget__about">
+                                <div class="footer-widget__logo">
+                                    <a href="index.html"><img src="assets/images/autonav-marine-logo.png" alt=""></a>
                                 </div>
-                                <div class="footer-widget-three__about-content">
-                                    <p>Every day: 10 am to 7 pm</p>
-                                    <p>Sun: 11 am to 6 pm</p>
-                                    <h4>4517 Washington Ave. <br> Manchester, 95</h4>
-                                    <a href="#" class="footer-widget-three__about-google-map">Google Map <span
-                                            class="icon-arrow-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <div class="footer-widget-two__column footer-widget-two__social">
-                                <div class="footer-widget-three__title-box">
-                                    <h3 class="footer-widget-three__title">Our Social</h3>
-                                </div>
-                                <h3 class="footer-widget-three__social-text">Your Brightest <br> Choice in Repairs</h3>
-                                <div class="site-footer-three__social">
+                                <p class="footer-widget__about-text">“Your global partner in maritime navigation,
+                                    communication, and safety solutions, committed to excellence since 2001.”</p>
+                                <div class="site-footer__social">
                                     <a href="#"><i class="icon-facebook"></i></a>
                                     <a href="#"><i class="icon-xpa"></i></a>
                                     <a href="#"><i class="icon-link-in"></i></a>
@@ -861,35 +644,67 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                            <div class="footer-widget-two__column footer-widget-three__newsletter">
-                                <div class="footer-widget-three__title-box">
-                                    <h3 class="footer-widget-three__title">Subscribe</h3>
+                        <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="footer-widget__column footer-widget__usefull-link">
+                                <div class="footer-widget__title-box">
+                                    <h3 class="footer-widget__title">Our Company</h3>
                                 </div>
-                                <p class="footer-widget-three__newsletter-text">Get the latest updates & exclusive
-                                    content to your inbox.</p>
-                                <form class="footer-widget-three__newsletter-form mc-form" data-url="MC_FORM_URL"
-                                    novalidate="novalidate">
-                                    <div class="footer-widget-three__newsletter-form-input-box">
-                                        <input type="email" placeholder="Enter email address..." name="EMAIL">
-                                    </div>
-                                    <button type="submit"
-                                        class="thm-btn footer-widget-three__newsletter-btn">Subscribe</button>
-                                </form>
+                                <div class="footer-widget__link-box">
+                                    <ul class="footer-widget__link list-unstyled">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="products.html">Products</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="footer-widget__column footer-widget__services">
+                                <div class="footer-widget__title-box">
+                                    <h3 class="footer-widget__title">Our Services</h3>
+                                </div>
+                                <ul class="footer-widget__link list-unstyled">
+                                    <li><a href="electric-panel-repair.html">Electric Repair</a></li>
+                                    <li><a href="lighting-fixtures.html">Lighting & Fixture</a></li>
+                                    <li><a href="maintenance-service.html">European Lard Sration</a></li>
+                                    <li><a href="maintenance-service.html">Electric Maintenance</a></li>
+                                    <li><a href="installing-ceiling-fan.html">Colling Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__column footer-widget__contact">
+                                <div class="footer-widget__title-box">
+                                    <h3 class="footer-widget__title">Contact us</h3>
+                                </div>
+                                <ul class="footer-widget__contact-list list-unstyled">
+                                    <li>
+                                        <h3>Address</h3>
+                                        <div class="content">
+                                            <p>Autonav Marine FZE, Warehouse No: 335, Dubai Maritime City, Dubai, UAE.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Contact</h3>
+                                        <div class="content">
+                                            <p><a href="tel:+97145727617">+971 4 572 7617</a></p>
+                                            <p><a href="mailto:info@autonavmarine.com">info@autonavmarine.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="site-footer-three__bottom">
+            <div class="site-footer__bottom">
                 <div class="container">
-                    <div class="site-footer-three__bottom-inner">
-                        <p class="site-footer-three__bottom-text">Copyright 2024. All rights reserved</p>
-                        <div class="site-footer-three__logo">
-                            <a href="index.html"><img src="assets/images/resources/footer-logo-1.png" alt=""></a>
-                        </div>
-                        <ul class="list-unstyled site-footer-three__bottom-menu">
-                            <li><a href="contact.html">Support</a></li>
+                    <div class="site-footer__bottom-inner">
+                        <p class="site-footer__bottom-text">Copyright <script>document.write(new Date().getFullYear());</script>. All rights reserved</p>
+                        <ul class="list-unstyled site-footer__bottom-menu">
                             <li><a href="about.html">Terms and Condition</a></li>
                             <li><a href="about.html">Privacy and Policy</a></li>
                         </ul>
@@ -897,7 +712,7 @@
                 </div>
             </div>
         </footer>
-        <!--Site Footer Two End-->
+        <!--Site Footer End-->
 
 
 

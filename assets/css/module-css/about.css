@@ -573,7 +573,7 @@
     position: absolute;
     bottom: -191px;
     right: -170px;
-    background-color: var(--erepair-base);
+    /* background-color: var(--erepair-base); */
     border-radius: 20px;
 }
 

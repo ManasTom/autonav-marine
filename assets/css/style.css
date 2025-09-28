@@ -258,7 +258,7 @@ ul {
 }
 
 .section-title__title {
-  color: var(--erepair-black);
+  color: #fff;
   font-size: 48px;
   line-height: 58px;
   font-weight: 600;
@@ -2470,7 +2470,7 @@ ul {
 
 .cta-one__btn {
   color: var(--erepair-white);
-  background-color: var(--erepair-base);
+  background-color: #b88b61;
 }
 
 .cta-one__btn::before,
