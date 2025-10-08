@@ -2558,13 +2558,45 @@ ul {
   color: #fff;
 }
 
-.cntry-btn{
+.cntry-btn {
   border: 2px solid #004f99 !important;
   margin-bottom: 15px !important;
   cursor: default;
 }
 
 
+#product {
+  z-index: 99999 !important;
+  max-height: 200px !important;
+  overflow: scroll !important;
+}
+
+
+
+.ajax-response {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.ajax-response.success {
+  background: #e6f4ea;
+  color: #2d7a3f;
+  border: 1px solid #c2e3cb;
+}
+
+.ajax-response.error {
+  background: #fdecea;
+  color: #b71c1c;
+  border: 1px solid #f5c2c0;
+}
+
+
+.shop-page-one-single .thm-btn{
+  color: #fff;
+}
 
 /*--------------------------------------------------------------
 # End
