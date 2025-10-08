@@ -438,7 +438,7 @@
                             <div class="contact-three__left">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722544.331349735!2d51.306623832416626!3d24.336137937600697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa175020615f125f%3A0x3aab22a6e0836dd1!2sAUTONAV%20MARINE%20FZE!5e0!3m2!1sen!2sin!4v1759078062193!5m2!1sen!2sin"
-                                    class="google-map__one" allowfullscreen></iframe>
+                                    class="google-map__one" allowfullscreen height="100%"></iframe>
                             </div>
                         </div>
                         <div class="col-xl-6">
@@ -467,22 +467,79 @@
                                                 <input type="text" placeholder="Company" name="company">
                                             </div>
                                         </div>
-                                        <div class="col-xl-6 col-lg-6">
+                                        <div class="col-xl-12 col-lg-12">
                                             <div class="contact-three__input-box">
-                                                <input type="text" placeholder="Company" name="company">
+                                                <select name="product" id="product">
+                                                    <option value="" disabled selected>Select Product</option>
+                                                    <option value="Portable Gas Detector">Portable Gas Detector</option>
+                                                    <option value="Fixed Gas Detector">Fixed Gas Detector</option>
+                                                    <option value="Calibration Gases">Calibration Gases</option>
+                                                    <option value="Regulators">Regulators</option>
+                                                    <option value="Gas Detector Tubes">Gas Detector Tubes</option>
+                                                    <option value="Heat And Smoke Tester">Heat & Smoke Tester</option>
+                                                    <option value="Manual Call Point">Manual Call Point</option>
+                                                    <option value="Alcometer">Alcometer</option>
+                                                    <option value="Telephone System">Telephone System</option>
+                                                    <option value="Sound Powered Telephones">Sound Powered Telephones
+                                                    </option>
+                                                    <option value="PA System">PA System</option>
+                                                    <option value="Navigational And Hazard Light">Navigational / Hazard
+                                                        Light</option>
+                                                    <option value="UTI">UTI</option>
+                                                    <option value="Fixed CO2 System">Fixed CO₂ System</option>
+                                                    <option value="Fixed Dry Chemical Powder Systems">Fixed Dry Chemical
+                                                        Powder Systems</option>
+                                                    <option value="Fixed Foam Systems">Fixed Foam Systems</option>
+                                                    <option value="Wet Chemical System">Wet Chemical System</option>
+                                                    <option value="Clean Agent System">Clean Agent System</option>
+                                                    <option value="Water Mist System">Water Mist System</option>
+                                                    <option value="Immersion Suits">Immersion Suits</option>
+                                                    <option value="SCBA">SCBA</option>
+                                                    <option value="Fire Extinguisher">Fire Extinguisher</option>
+                                                    <option value="Sprinkler Systems">Sprinkler Systems</option>
+                                                    <option value="Firefighters Outfits">Firefighters’ Outfits</option>
+                                                    <option value="Lifeboat Air Cylinders">Lifeboat Air Cylinders
+                                                    </option>
+                                                    <option value="EEBD">EEBD</option>
+                                                    <option value="Life Jackets">Life Jackets</option>
+                                                    <option value="Hoses For High Pressure CO2 Systems">Hoses for High
+                                                        Pressure CO₂ Systems</option>
+                                                    <option
+                                                        value="Ship Generator Lube Oil And Water Pressure And Temperature Sensors">
+                                                        Ship Generator Lube Oil/Water Pressure & Temperature Sensors
+                                                    </option>
+                                                    <option value="Generator AVR Speed Controller RPM Sensor">Generator
+                                                        AVR, Speed Controller, RPM Sensor</option>
+                                                    <option value="Ship Generator MCCB ACB VCB Bus Tie Breakers">Ship
+                                                        Generator MCCB, ACB, VCB, Bus Tie Breakers</option>
+                                                    <option value="Fire Detection And Alarm Systems">Fire Detection &
+                                                        Alarm Systems</option>
+                                                    <option value="Communication And Surveillance Solutions">
+                                                        Communication & Surveillance Solutions</option>
+                                                    <option value="Hydraulic Hoses And Fittings">Hydraulic Hoses &
+                                                        Fittings</option>
+                                                </select>
                                             </div>
                                         </div>
+                                        <input type="text" name="country" style="display:none">
                                         <div class="col-xl-12">
                                             <div class="contact-three__input-box text-message-box">
                                                 <textarea name="message" placeholder="Messege"></textarea>
                                             </div>
                                             <div class="contact-three__btn-box">
+                                                <div class="g-recaptcha"
+                                                    data-sitekey="6LdPbOIrAAAAALINzqadecDKBOEiDB2NjyjJIyOs"></div>
+                                                <script src="https://www.google.com/recaptcha/api.js" async
+                                                    defer></script>
+                                                <br>
                                                 <button type="submit" class="thm-btn contact-three__btn"
                                                     data-loading-text="Please wait...">
                                                     send a message
                                                 </button>
                                             </div>
                                         </div>
+
+
                                     </div>
                                 </form>
                                 <p class="ajax-response mb-0"></p>
@@ -721,7 +778,7 @@
     <script src="assets/js/gsap/gsap.js"></script>
     <script src="assets/js/gsap/ScrollTrigger.js"></script>
     <script src="assets/js/gsap/SplitText.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
+    <!-- <script src="assets/js/ajax-form.js"></script> -->
 
 
 

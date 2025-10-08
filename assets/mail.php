@@ -1,199 +1,196 @@
 <?php
-// =======================
-// CONFIGURATION
-// =======================
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
-require 'src/Exception.php';
+require __DIR__ . '/../src/PHPMailer.php';
+require __DIR__ . '/../src/SMTP.php';
+require __DIR__ . '/../src/Exception.php';
 
-// Google reCAPTCHA secret key
-$recaptcha_secret = '6LdPbOIrAAAAAKBuMM7iXPmjRVClh2uKC7GkW_-7'; // 🔹 replace this with your actual secret key
+// ==========================================================================
+// CONFIGURATION
+// ==========================================================================
+$toEmail = "autonavproduct@gmail.com"; // Main receiver
+$fromName = "AUTONAV MARINE FZE";
+$recaptchaSecret = "6LdPbOIrAAAAAKBuMM7iXPmjRVClh2uKC7GkW_-7"; // <-- Replace with your secret key
 
-// Email settings
-$to = 'autonavproduct@gmail.com';  // 🔹 receiver (company inbox)
-$from_email = 'autonavproduct@gmail.com'; // same account used for SMTP
-$from_name = 'Autonav Marine FZE';
-
-// Logo for email styling
-$logo_url = 'https://autonavmarine.com/alnakheel-logo.webp';
-
-// =======================
+// ==========================================================================
 // SECURITY CHECKS
-// =======================
+// ==========================================================================
 
-// 1️⃣ Honeypot field
-if (!empty($_POST['website'])) {
-    header("Location: 404.html");
-    exit();
+// Honeypot
+if (!empty($_POST['hidden_field'])) {
+    http_response_code(400);
+    echo "Spam detected.";
+    exit;
 }
 
-// 2️⃣ reCAPTCHA verification
+// Verify reCAPTCHA
 if (empty($_POST['g-recaptcha-response'])) {
-    header("Location: 404.html");
-    exit();
+    http_response_code(400);
+    echo "Please verify the reCAPTCHA.";
+    exit;
 }
 
-$recaptcha_response = $_POST['g-recaptcha-response'];
-$verify_response = file_get_contents(
-    "https://www.google.com/recaptcha/api/siteverify?secret={$recaptcha_secret}&response={$recaptcha_response}"
-);
-$response_data = json_decode($verify_response);
+$recaptchaResponse = $_POST['g-recaptcha-response'];
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+$responseData = json_decode($verify);
 
-if (!$response_data->success) {
-    header("Location: 404.html");
-    exit();
+if (!$responseData->success) {
+    http_response_code(400);
+    echo "reCAPTCHA verification failed.";
+    exit;
 }
 
-// =======================
-// SANITIZE INPUTS
-// =======================
-function clean_input($data) {
-    return htmlspecialchars(stripslashes(trim($data)));
+// ==========================================================================
+// INPUT SANITIZATION
+// ==========================================================================
+function clean($value) {
+    return htmlspecialchars(strip_tags(trim($value)), ENT_QUOTES, 'UTF-8');
 }
 
-$name     = clean_input($_POST['name'] ?? '');
-$email    = clean_input($_POST['email'] ?? '');
-$number   = clean_input($_POST['number'] ?? '');
-$company  = clean_input($_POST['company'] ?? '');
-$product  = clean_input($_POST['product'] ?? '');
-$message  = clean_input($_POST['message'] ?? '');
+$name     = clean($_POST['name'] ?? '');
+$email    = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+$number   = clean($_POST['number'] ?? '');
+$company  = clean($_POST['company'] ?? '');
+$product  = clean($_POST['product'] ?? '');
+$message  = clean($_POST['message'] ?? '');
 
-// Validate required fields
-if (empty($name) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header("Location: 404.html");
-    exit();
+if (!$name || !$email || !$message) {
+    http_response_code(400);
+    echo "Please fill out all required fields.";
+    exit;
 }
 
-// =======================
-// EMAIL CONTENT
-// =======================
-$email_subject = "New Enquiry from Autonav Marine Website";
+// ==========================================================================
+// HTML EMAIL TEMPLATE
+// ==========================================================================
+$logoURL = "https://autonavmarine.com/assets/images/autonav-marine-logo.png";
+$timestamp = date("d M Y, h:i A");
 
-$email_body = "
-<html>
+$adminBody = <<<EOD
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<title>New Enquiry</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    padding: 20px;
-}
-.container {
-    background: #fff;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: auto;
-}
-.logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.logo img {
-    width: 100px;
-}
-h2 {
-    color: #0a58ca;
-}
-p {
-    line-height: 1.6;
-    font-size: 15px;
-}
-.footer {
-    margin-top: 20px;
-    font-size: 13px;
-    color: #777;
-    text-align: center;
-}
+body { font-family: 'Segoe UI', Arial, sans-serif; background:#f8f9fa; margin:0; padding:0; }
+.container { max-width:600px; margin:20px auto; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+.header { background:#002a5c; padding:20px; text-align:center; }
+.header img { width:180px; }
+.content { padding:25px; color:#333; }
+h2 { color:#002a5c; margin-bottom:15px; }
+table { width:100%; border-collapse:collapse; margin-top:10px; }
+td { padding:10px; border-bottom:1px solid #eee; }
+.footer { text-align:center; background:#f0f3f8; padding:15px; font-size:12px; color:#555; }
 </style>
 </head>
 <body>
-<div class='container'>
-    <div class='logo'>
-        <img src='{$logo_url}' alt='Autonav Marine FZE'>
-    </div>
+<div class="container">
+  <div class="header">
+    <img src="$logoURL" alt="AUTONAV MARINE FZE Logo">
+  </div>
+  <div class="content">
     <h2>New Enquiry Received</h2>
-    <p><strong>Name:</strong> {$name}</p>
-    <p><strong>Email:</strong> {$email}</p>
-    <p><strong>Phone:</strong> {$number}</p>
-    <p><strong>Company:</strong> {$company}</p>
-    <p><strong>Product:</strong> {$product}</p>
-    <p><strong>Message:</strong><br>{$message}</p>
-    <div class='footer'>This email was sent from the Autonav Marine FZE website.</div>
+    <table>
+      <tr><td><strong>Name:</strong></td><td>$name</td></tr>
+      <tr><td><strong>Email:</strong></td><td>$email</td></tr>
+      <tr><td><strong>Phone:</strong></td><td>$number</td></tr>
+      <tr><td><strong>Company:</strong></td><td>$company</td></tr>
+      <tr><td><strong>Product:</strong></td><td>$product</td></tr>
+      <tr><td><strong>Message:</strong></td><td>$message</td></tr>
+    </table>
+    <p style="margin-top:15px;font-size:13px;color:#555;">Submitted on $timestamp</p>
+  </div>
+  <div class="footer">
+    © AUTONAV MARINE FZE — Enquiry Notification
+  </div>
 </div>
 </body>
 </html>
-";
+EOD;
 
-// =======================
-// SEND MAIL VIA GMAIL SMTP
-// =======================
+$userReply = <<<EOD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You - AUTONAV MARINE FZE</title>
+<style>
+body { font-family:'Segoe UI', Arial, sans-serif; background:#f5f7fa; margin:0; padding:0; }
+.container { max-width:600px; margin:20px auto; background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.08); overflow:hidden; }
+.header { background:#002a5c; padding:20px; text-align:center; }
+.header img { width:150px; }
+.content { padding:25px; color:#333; line-height:1.6; }
+h2 { color:#002a5c; }
+.footer { background:#f0f3f8; text-align:center; padding:15px; font-size:12px; color:#666; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <img src="$logoURL" alt="AUTONAV MARINE FZE">
+  </div>
+  <div class="content">
+    <h2>Thank You, $name!</h2>
+    <p>We have received your enquiry regarding <strong>$product</strong>. Our team will get back to you shortly.</p>
+    <p>If you have any urgent queries, feel free to reach us at <a href="mailto:autonavproduct@gmail.com">autonavproduct@gmail.com</a>.</p>
+    <p>Warm regards,<br><strong>AUTONAV MARINE FZE</strong></p>
+  </div>
+  <div class="footer">
+    © AUTONAV MARINE FZE — All Rights Reserved
+  </div>
+</div>
+</body>
+</html>
+EOD;
+
+// ==========================================================================
+// SEND EMAILS USING PHPMailer
+// ==========================================================================
 $mail = new PHPMailer(true);
 
 try {
-    // Server settings
+    // Main mail (to admin)
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = $from_email;
-    $mail->Password = 'povy vrli krbs lltd'; // 🔹 App password
+    $mail->Username = 'autonavproduct@gmail.com';
+    $mail->Password = 'povy vrli krbs lltd';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    // Recipients
-    $mail->setFrom($from_email, $from_name);
-    $mail->addAddress($to);
+    $mail->setFrom('autonavproduct@gmail.com', $fromName);
+    $mail->addAddress($toEmail);
     $mail->addReplyTo($email, $name);
-
-    // Content
     $mail->isHTML(true);
-    $mail->Subject = $email_subject;
-    $mail->Body = $email_body;
+    $mail->Subject = "New Enquiry from $name";
+    $mail->Body = $adminBody;
 
     $mail->send();
 
-    // =======================
-    // AUTO REPLY TO SENDER
-    // =======================
-    $reply = new PHPMailer(true);
-    $reply->isSMTP();
-    $reply->Host = 'smtp.gmail.com';
-    $reply->SMTPAuth = true;
-    $reply->Username = $from_email;
-    $reply->Password = 'povy vrli krbs lltd';
-    $reply->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $reply->Port = 587;
+    // Auto reply to user
+    $auto = new PHPMailer(true);
+    $auto->isSMTP();
+    $auto->Host = 'smtp.gmail.com';
+    $auto->SMTPAuth = true;
+    $auto->Username = 'autonavproduct@gmail.com';
+    $auto->Password = 'povy vrli krbs lltd';
+    $auto->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $auto->Port = 587;
 
-    $reply->setFrom($from_email, 'Autonav Marine FZE');
-    $reply->addAddress($email, $name);
-    $reply->isHTML(true);
-    $reply->Subject = "Thank you for contacting Autonav Marine FZE";
-    $reply->Body = "
-    <html><body style='font-family:Arial,sans-serif;color:#333;'>
-    <div style='max-width:600px;margin:auto;padding:25px;background:#f9f9f9;border-radius:8px;'>
-        <div style='text-align:center;margin-bottom:20px;'>
-            <img src='{$logo_url}' width='100' alt='Autonav Marine FZE'>
-        </div>
-        <h2 style='color:#0a58ca;'>Thank You, {$name}!</h2>
-        <p>We have received your enquiry regarding <strong>{$product}</strong>.</p>
-        <p>Our team will get back to you shortly.</p>
-        <p style='margin-top:20px;'>Warm regards,<br><strong>Autonav Marine FZE Team</strong></p>
-    </div>
-    </body></html>";
+    $auto->setFrom('autonavproduct@gmail.com', $fromName);
+    $auto->addAddress($email, $name);
+    $auto->isHTML(true);
+    $auto->Subject = "Thank You for Contacting AUTONAV MARINE FZE";
+    $auto->Body = $userReply;
 
-    $reply->send();
+    $auto->send();
 
-    // Redirect to thank you page
-    header("Location: ../thankyou.html");
-    exit();
+    header("Location: https://autonavmarine.com/thankyou.html");
 
 } catch (Exception $e) {
-    header("Location: ../404.html");
-    exit();
+    http_response_code(500);
+    echo "Mailer Error: {$mail->ErrorInfo}";
 }
 ?>
