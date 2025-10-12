@@ -124,11 +124,11 @@
     background-color: var(--erepair-base);
     border-radius: 20px;
     margin-top: 26px;
-    margin-right: 10px;
+    margin-right: 0px;
     margin-left: -38px;
     margin-bottom: 20px;
     gap: 40px;
-    padding: 21px 30px 20px;
+    padding: 21px 20px 20px;
     z-index: 2;
 }
 
@@ -167,6 +167,12 @@
     line-height: 24px;
     text-transform: uppercase;
     color: var(--erepair-extra);
+}
+
+@media only screen and (max-width: 340px) {
+    .about-one__cirtified h3 {
+        font-size: 13px;
+    }
 }
 
 .about-one__right {

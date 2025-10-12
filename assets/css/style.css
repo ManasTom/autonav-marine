@@ -50,7 +50,7 @@ body {
   font-size: 16px;
   line-height: 29px;
   font-weight: 400;
-  color: var(--erepair-gray);
+  color: var(--erepair-black);
 }
 
 body.locked {
@@ -471,7 +471,7 @@ ul {
   animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  background-image: url(../images/autonav-marine-logo.png);
+  background-image: url(../images/autonav-marine-logo.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 120px auto;
@@ -548,7 +548,7 @@ ul {
   -webkit-transition: all .4s ease-in .8s;
   -o-transition: all .4s ease-in .8s;
   transition: all .4s ease-in .8s;
-  cursor: url(../images/icon/cross-out.png),
+  cursor: url(../images/icon/cross-out.webp),
     pointer;
   z-index: 999;
 }
