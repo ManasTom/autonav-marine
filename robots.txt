@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: /
+
+Disallow: /cgi-bin/
+Disallow: 403.html
+Disallow: 404.html
+
+Sitemap: https://autonavmarine.com/sitemap.xml

@@ -1189,13 +1189,13 @@ ul {
   z-index: 1;
 }
 
-.main-menu .main-menu__list>li.current>a::before,
+/* .main-menu .main-menu__list>li.current>a::before,
 .main-menu .main-menu__list>li:hover>a::before,
 .stricky-header .main-menu__list>li.current>a::before,
 .stricky-header .main-menu__list>li:hover>a::before {
   transform: scale(1, 1);
   transform-origin: right center;
-}
+} */
 
 .main-menu .main-menu__list>li.dropdown>a {
   padding-right: 15px;

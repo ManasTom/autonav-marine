@@ -535,7 +535,7 @@
     });
     // if no file name return
     if ("" == FileName) {
-      selector.find("li").eq(0).addClass("current");
+      // selector.find("li").eq(0).addClass("current");
     }
   }
 

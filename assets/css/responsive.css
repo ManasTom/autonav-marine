@@ -238,6 +238,8 @@
         line-height: 50px;
     }
 
+
+
     .about-three__img-two {
         bottom: 0;
     }
@@ -766,6 +768,10 @@
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
+        .about-three__img{
+        display: none;
+    }
+
     .section-title__title {
         font-size: 25px;
         line-height: 35px;
@@ -1102,7 +1108,7 @@
         bottom: 0;
         right: 0;
         margin-top: 30px;
-        max-width: 265px;
+        max-width: 100%;
     }
 
     .about-three__img-two img {
